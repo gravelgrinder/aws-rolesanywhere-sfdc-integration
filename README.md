@@ -13,7 +13,15 @@ Demonstration for how to leverage AWS RolesAnywhere to allow integration between
 terraform init
 ```
 
-2. Provision the resources in the Terraform scripts.  This will create an Amazon S3 bucket, IAM profile, IAM role, Private Certificate Authority, CA Root Certificate, Roles Anywhere Trust Anchor and RolesAnywhere Profile. The RolesAnywhere Profile will be linked to the `tf_sfdc_iam_role` IAM role.  That role's trust policy will limit the AssumeRole action to the Trust Anchor we created as well as the Certificate CN name = "Devin".
+2. Provision the resources in the Terraform scripts.  This will create the following...
+    - Amazon S3 bucket
+    - IAM profile
+    - IAM role
+    - Private Certificate Authority
+    - CA Root Certificate
+    - Roles Anywhere Trust Anchor
+    - Roles Anywhere Profile
+    The RolesAnywhere Profile will be linked to the `tf_sfdc_iam_role` IAM role.  That role's trust policy will limit the AssumeRole action to the Trust Anchor we created as well as the Certificate CN name = "Devin".
 ```
 terraform apply
 ```
