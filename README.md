@@ -21,7 +21,8 @@ terraform init
     - CA Root Certificate
     - Roles Anywhere Trust Anchor
     - Roles Anywhere Profile
-    The RolesAnywhere Profile will be linked to the `tf_sfdc_iam_role` IAM role.  That role's trust policy will limit the AssumeRole action to the Trust Anchor we created as well as the Certificate CN name = "Devin".
+
+The RolesAnywhere Profile will be linked to the `tf_sfdc_iam_role` IAM role.  That role's trust policy will limit the AssumeRole action to the Trust Anchor we created as well as the Certificate CN name = "Devin".
 ```
 terraform apply
 ```
